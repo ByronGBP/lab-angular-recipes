@@ -10,18 +10,18 @@ import { AppComponent } from './app.component';
 import { RecipesService } from './services/recipes.service';
 
 import { IngredientComponent } from './components/ingredient/ingredient.component';
-import { DishComponent } from './components/dish/dish.component';
 
 import { RecipePageComponent } from './page/recipe-page/recipe-page.component';
 
-import { routes } from './routes/routes'
+import { routes } from './routes/routes';
+import { DishCardComponent } from './components/dish-card/dish-card.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     IngredientComponent,
-    DishComponent,
     RecipePageComponent,
+    DishCardComponent,
   ],
   imports: [
     BrowserModule,
