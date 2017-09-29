@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Dish } from '../../models/dish'
+
+import { RecipesService } from '../../services/recipes.service'
+
+
 @Component({
   selector: 'app-recipe-page',
   templateUrl: './recipe-page.component.html',
@@ -7,7 +12,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipePageComponent implements OnInit {
 
-  constructor() { }
+  dishes: Dish[];
+
+  constructor(private recipesServie: RecipesService) {
+    recipesServie.getDishes().subscribe((dish) => {
+      this.dishes = dish;
+    });
+   }
 
   ngOnInit() {
   }

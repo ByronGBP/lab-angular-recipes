@@ -1,3 +1,6 @@
-<p>
-  recipe-page works!
-</p>
+
+<div *ngFor="let dish of dishes">
+  <h2>{{dish.name}}</h2>
+  <img class="img-dish" [src]="dish.image" alt="">
+</div>
+<h1></h1>

@@ -3,6 +3,8 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
+import { Dish } from '../models/dish'
+
 @Injectable()
 export class RecipesService {
 
@@ -13,7 +15,7 @@ export class RecipesService {
       .map((res: Response) => {
         let data = res.json();
         return data.map((obj) => {
-          //return new Task(obj);
+          return new Dish(obj);
         });
       });
   }
